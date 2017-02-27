@@ -1,0 +1,20 @@
+.Todo {
+
+}
+.Todo.completed h3 {
+  text-decoration: line-through;
+}
+
+.Todo .checkbox, .Todo h3 {
+  display: inline-block;
+}
+
+.Todo .checkbox {
+  width: 25px;
+  transform: scale(1.5);
+}
+
+.Todo .checkbox input {
+  position: relative;
+  margin: 0;
+}
