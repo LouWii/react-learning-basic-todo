@@ -5,4 +5,4 @@ Learning React from rock bottom from the official React [documentation](https://
 **Note:**
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Read more in [BOOTSTRAP.md](BOOTSTRAP)
+Read more in [BOOTSTRAP.md](BOOTSTRAP.md)
