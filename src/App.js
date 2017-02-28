@@ -46,7 +46,7 @@ class App extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-sm-4">
-              <TodoInput onTextChange={this.handleTodoInputChange} onAction={this.addTodo} />
+              <TodoInput onTextChange={this.handleTodoInputChange} onAction={this.addTodo} newTodoText={this.state.todoText} />
             </div>
             <div className="col-sm-8">
               <h4 className="todo-count">Currently {this.state.todos.length} todos in the list ({this.state.todos.filter((todo) => todo.complete).length} completed)</h4>
