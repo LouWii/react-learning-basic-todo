@@ -11,11 +11,12 @@ class App extends React.Component {
 
     this.addTodo = this.addTodo.bind(this)
     this.handleTodoInputChange = this.handleTodoInputChange.bind(this)
+    this.toggleTodo = this.toggleTodo.bind(this)
   }
 
   addTodo(text) {
     const todo = {text: this.state.todoText, complete: false}
-    let todos = this.state.todos;
+    let todos = this.state.todos
     todos.push(todo)
     this.setState({todos: todos, todoText: ""})
   }
@@ -30,6 +31,12 @@ class App extends React.Component {
     });
   }
 
+  toggleTodo(todoIndex) {
+    let todos = this.state.todos
+    todos[todoIndex].complete = !todos[todoIndex].complete
+    this.setState({todos: todos})
+  }
+
   render() {
     return (
       <div className="App">
@@ -42,8 +49,8 @@ class App extends React.Component {
               <TodoInput onTextChange={this.handleTodoInputChange} onAction={this.addTodo} />
             </div>
             <div className="col-sm-8">
-              <h4 className="todo-count">Currently {this.state.todos.length} todos in the list</h4>
-              <Todos todos={this.state.todos} />
+              <h4 className="todo-count">Currently {this.state.todos.length} todos in the list ({this.state.todos.filter((todo) => todo.complete).length} completed)</h4>
+              <Todos todos={this.state.todos} toggleTodo={this.toggleTodo} />
             </div>
           </div>
         </div>

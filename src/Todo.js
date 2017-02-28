@@ -7,7 +7,7 @@ class Todo extends React.Component  {
     return (
       <div className={"Todo " + (this.props.todo.complete ? "completed" : "pending")}>
         <div className="checkbox">
-          <input type="checkbox" checked={this.props.todo.complete ? "true" : ""} />
+          <input type="checkbox" checked={this.props.todo.complete ? "true" : ""} onChange={this.props.toggleTodo} />
         </div>
         <h3>{this.props.todo.text}</h3>
       </div>
