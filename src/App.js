@@ -12,6 +12,7 @@ class App extends React.Component {
     this.addTodo = this.addTodo.bind(this)
     this.handleTodoInputChange = this.handleTodoInputChange.bind(this)
     this.toggleTodo = this.toggleTodo.bind(this)
+    this.clearCompletedTodos = this.clearCompletedTodos.bind(this)
   }
 
   addTodo(text) {
@@ -37,6 +38,12 @@ class App extends React.Component {
     this.setState({todos: todos})
   }
 
+  clearCompletedTodos(event) {
+    let todos = this.state.todos
+    todos = todos.filter((todo) => !todo.complete)
+    this.setState({todos: todos})
+  }
+
   render() {
     return (
       <div className="App">
@@ -47,6 +54,7 @@ class App extends React.Component {
           <div className="row">
             <div className="col-sm-4">
               <TodoInput onTextChange={this.handleTodoInputChange} onAction={this.addTodo} newTodoText={this.state.todoText} />
+              <p><button className="btn btn-default" onClick={this.clearCompletedTodos}>Clear completed todos</button></p>
             </div>
             <div className="col-sm-8">
               <h4 className="todo-count">Currently {this.state.todos.length} todos in the list ({this.state.todos.filter((todo) => todo.complete).length} completed)</h4>
