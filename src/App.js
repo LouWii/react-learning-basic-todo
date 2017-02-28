@@ -17,7 +17,7 @@ class App extends React.Component {
     const todo = {text: this.state.todoText, complete: false}
     let todos = this.state.todos;
     todos.push(todo)
-    this.setState({todos: todos})
+    this.setState({todos: todos, todoText: ""})
   }
 
   handleTodoInputChange(event) {
