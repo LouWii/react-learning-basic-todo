@@ -1,7 +1,6 @@
 import React from 'react';
 import Todos from './Todos';
 import TodoInput from './TodoInput';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
@@ -35,15 +34,18 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Learning React - Todo App</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
         <div className="container">
-          <Todos todos={this.state.todos} />
-          <TodoInput onTextChange={this.handleTodoInputChange} onAction={this.addTodo} />
+          <div className="row">
+            <div className="col-sm-4">
+              <TodoInput onTextChange={this.handleTodoInputChange} onAction={this.addTodo} />
+            </div>
+            <div className="col-sm-8">
+              <h4 className="todo-count">Currently {this.state.todos.length} todos in the list</h4>
+              <Todos todos={this.state.todos} />
+            </div>
+          </div>
         </div>
       </div>
     );
