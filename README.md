@@ -6,6 +6,10 @@ Using only React (no router, no redux, no flux).
 
 ![learning react - todo list](https://cloud.githubusercontent.com/assets/2750789/23441552/d6aa3090-fdd7-11e6-859e-0639224f6d1a.png)
 
+## Demo
+
+[Click here](http://experiment.louwii.fr/learning-react-basic-todo/) for a live demo.
+
 ## Setup
 
 Clone the repo `git clone https://github.com/LouWii/react-learning-basic-todo.git todo-app`
