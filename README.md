@@ -4,7 +4,7 @@ Learning React from rock bottom from the official React [documentation](https://
 
 Using only React (no router, no redux, no flux).
 
-[learning react - todo list](https://cloud.githubusercontent.com/assets/2750789/23441552/d6aa3090-fdd7-11e6-859e-0639224f6d1a.png)
+![learning react - todo list](https://cloud.githubusercontent.com/assets/2750789/23441552/d6aa3090-fdd7-11e6-859e-0639224f6d1a.png)
 
 ## Setup
 
