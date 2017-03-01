@@ -5,12 +5,10 @@ class Todo extends React.Component  {
 
   render() {
     return (
-      <div className={"Todo " + (this.props.todo.complete ? "completed" : "pending")}>
-        <div className="checkbox">
-          <input type="checkbox" checked={this.props.todo.complete ? "true" : ""} onChange={this.props.toggleTodo} />
-        </div>
-        <h3>{this.props.todo.text}</h3>
-      </div>
+      <li className={"Todo " + (this.props.todo.complete ? "completed" : "pending")}>
+        <span className="box"><input type="checkbox" checked={this.props.todo.complete ? "true" : ""} onChange={this.props.toggleTodo} /></span>
+        <span className="text">{this.props.todo.text}</span>
+      </li>
     );
   }
 }
